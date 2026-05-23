@@ -1,0 +1,21 @@
+name: fabric_dbt_local_dev_tutorial
+version: "1.0.0"
+config-version: 2
+
+profile: fabric_dbt_local_dev_tutorial
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+models:
+  fabric_dbt_local_dev_tutorial:
+    +materialized: table
