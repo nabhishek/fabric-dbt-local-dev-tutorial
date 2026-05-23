@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension with simple order metrics.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: completed_order_amount
+        tests:
+          - not_null
